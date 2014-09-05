@@ -1,0 +1,236 @@
+= Arquillian All
+// settings:
+:page-layout: base
+:idprefix:
+:uri-repo: https://github.com/rmpestano/arquillian-all
+:source-language: java
+:language: {source-language}
+ 
+
+This project gather 'all' arquillian *maven* dependencies in one jar. In fact its not ALL dependencies cause arquillian space is too big but i've bundled the ones i think are most used in arquillian projectes, if you think something important is missing you main clone and send a pull request.  
+The main motivation of this approach is to help beginners to start with arquillian but keep in my that will you loose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
+
+== How to use
+
+Declare the following dependencies in you pom.xml:
+[source,xml]
+----
+<dependencies>
+  <dependency>
+            <groupId>com.procergs.acr</groupId>
+            <artifactId>arquillian-all</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency> <!--1-->
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency> <!--1-->
+            <groupId>org.jboss.shrinkwrap</groupId>
+            <artifactId>shrinkwrap-api</artifactId>
+            <version>1.2.2</version>
+            <scope>test</scope>
+        </dependency>
+</dependencies>
+----
+<1> We may get ride of these dependencies in future and stay only with arquillian-all, see issue #.
+
+== What is being bundled within arquillian-all.jar?
+
+see arquillian-all {uri-repo}/pom.xml[pom.xml] and {uri-repo}/tree.txt[dependency tree]
+
+refer to release notes to see what's bundled on each version.
+ 
+
+
+Here is a diff after adding arquillian-all:
+
+[source,xml]
+----
+Index: pom.xml
+===================================================================
+--- pom.xml	(revision 1258)
++++ pom.xml	(revision 1259)
+@@ -176,6 +176,11 @@
+ 
+	<dependencies
+ 		<!-- Test dependencies -->
+ 	   <dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+				
+ 		<!-- arquillian -->
++		  <dependency>
++            <groupId>org.jboss.arquillian</groupId>
++            <artifactId>org.jboss.arquillian</artifactId>
++            <version>1.0.0</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>xml-apis</groupId>
++            <artifactId>xml-apis</artifactId>
++            <version>1.4.01</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.jboss.shrinkwrap</groupId>
++            <artifactId>shrinkwrap-api</artifactId>
++            <version>1.2.2</version>
++            <scope>test</scope>
++        </dependency>
+-		<dependency>
+-			<groupId>org.jboss.arquillian.junit</groupId>
+-			<artifactId>arquillian-junit-container</artifactId>
+-			<scope>test</scope>
+-		</dependency>
+-
+-		<!--arquillian persistence(dbunit) -->
+-		<dependency>
+-			<groupId>org.jboss.arquillian.extension</groupId>
+-			<artifactId>arquillian-persistence-api</artifactId>
+-			<version>1.0.0.Alpha7</version>
+-			<scope>test</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.jboss.arquillian.extension</groupId>
+-			<artifactId>arquillian-persistence-dbunit</artifactId>
+-			<version>1.0.0.Alpha7</version>
+-			<scope>test</scope>
+-		</dependency>
+-
+-		<!-- warp -->
+-
+-		<dependency>
+-			<groupId>org.jboss.arquillian.extension</groupId>
+-			<artifactId>arquillian-warp</artifactId>
+-			<type>pom</type>
+-			<scope>test</scope>
+-			<version>${warp.version}</version>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.jboss.arquillian.extension</groupId>
+-			<artifactId>arquillian-warp-jsf</artifactId>
+-			<version>${warp.version}</version>
+-
+-		</dependency>
+-
+-		<!-- shrinkWrap resolvers -->
+-		<dependency>
+-			<groupId>org.jboss.shrinkwrap.resolver</groupId>
+-			<artifactId>shrinkwrap-resolver-depchain</artifactId>
+-			<scope>test</scope>
+-			<type>pom</type>
+-		</dependency>
+-
+-		<dependency>
+-			<groupId>org.jboss.arquillian.graphene</groupId>
+-			<artifactId>graphene-webdriver</artifactId>
+-			<type>pom</type>
+-			<scope>test</scope>
+-			<version>${version.graphene}</version>
+-		</dependency>
+-
+-         <dependency>
+-            <groupId>org.jboss.arquillian.graphene</groupId>
+-            <artifactId>arquillian-browser-screenshooter</artifactId>
+-            <version>2.1.0.Alpha1</version>
+-            <scope>test</scope>
+-         </dependency>
+ 
+-		<!-- arquillian bdd -->
+-
+-        <!-- jbehave -->
+- 		<dependency>
+-			<groupId>org.jboss.arquillian.jbehave</groupId>
+-			<artifactId>arquillian-jbehave-core</artifactId>
+-			<version>1.0.2</version>
+-			<scope>test</scope>
+-		</dependency>
+-
+-
+-		<dependency>
+-			<groupId>org.jboss.spec.javax.annotation</groupId>
+-			<artifactId>jboss-annotations-api_1.1_spec</artifactId>
+-			<version>1.0.1.Final</version>
+-			<scope>provided</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.jboss.spec.javax.ejb</groupId>
+-			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+-			<version>1.0.2.Final</version>
+-			<scope>provided</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.jboss.arquillian.protocol</groupId>
+-			<artifactId>arquillian-protocol-servlet</artifactId>
+-			<scope>test</scope>
+-		</dependency>
+-
+-	 	<dependency>
+-			<groupId>org.apache.httpcomponents</groupId>
+-			<artifactId>httpcore</artifactId>
+-			<version>4.2.5</version>
+-			<scope>test</scope>
+-		</dependency> 
+-		<dependency>
+-			<groupId>commons-collections</groupId>
+-			<artifactId>commons-collections</artifactId>
+-			<version>3.2.1</version>
+-		</dependency>
+-		<dependency>
+-			<groupId>xml-apis</groupId>
+-			<artifactId>xml-apis</artifactId>
+-			<version>1.4.01</version>
+-			<scope>test</scope>
+-		</dependency>
+-
+-		<dependency>
+-			<groupId>org.slf4j</groupId>
+-			<artifactId>slf4j-log4j12</artifactId>
+-			<version>1.7.5</version>
+-			<scope>test</scope>
+-		</dependency>
+-
+-		<dependency>
+-			<groupId>org.codehaus.jackson</groupId>
+-			<artifactId>jackson-core-lgpl</artifactId>
+-			<version>1.9.13</version>
+-			<scope>test</scope>
+-		</dependency>
+ 
+ 	</dependencies>
+ 
+-	<dependencyManagement>
+-		<dependencies>
+-			<dependency>
+-				<groupId>org.jboss.arquillian</groupId>
+-				<artifactId>arquillian-bom</artifactId>
+-				<version>${version.arquillian}</version>
+-				<type>pom</type>
+-				<scope>import</scope>
+-			</dependency>
+-			<dependency>
+-				<groupId>org.jboss.arquillian.selenium</groupId>
+-				<artifactId>selenium-bom</artifactId>
+-				<version>${version.selenium}</version>
+-				<type>pom</type>
+-				<scope>import</scope>
+-			</dependency>
+-			<dependency>
+-				<groupId>org.jboss.arquillian.extension</groupId>
+-				<artifactId>arquillian-drone-bom</artifactId>
+-				<version>${version.drone}</version>
+-				<type>pom</type>
+-				<scope>import</scope>
+-			</dependency>
+-		</dependencies>
+-	</dependencyManagement>
+----
+
+ 
