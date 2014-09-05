@@ -19,7 +19,7 @@ Declare the following dependencies and repository in your pom.xml:
 ----
 <dependencies>
   <dependency>
-      <groupId>com.procergs.acr</groupId>
+      <groupId>org.jboss.arquillian</groupId>
       <artifactId>arquillian-all</artifactId>
       <version>1.0.0</version>
       <scope>test</scope>
@@ -37,13 +37,13 @@ Declare the following dependencies and repository in your pom.xml:
       <scope>test</scope>
     </dependency>
 </dependencies>
- <repositories>
-    <repository>
-	  <id>arquillian all maven repo</id>
-	  <url>http://arquillian-all-repo.googlecode.com/git/</url>
-	  <layout>default</layout>
-	</repository>
-  </repositories>
+<repositories>
+  <repository>
+	 <id>arquillian all maven repo</id>
+	 <url>http://arquillian-all-repo.googlecode.com/git/</url>
+	 <layout>default</layout>
+   </repository>
+</repositories>
 ----
 <1> We may get ride of these dependencies in future and stay only with arquillian-all, see issue #.
 
