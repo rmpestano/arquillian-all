@@ -14,7 +14,7 @@ The main motivation of this approach is to help beginners to start with arquilli
 
 == How to use
 
-Declare the following dependencies in you pom.xml:
+Declare the following dependencies and repository in your pom.xml:
 [source,xml]
 ----
 <dependencies>
@@ -37,8 +37,19 @@ Declare the following dependencies in you pom.xml:
             <scope>test</scope>
         </dependency>
 </dependencies>
+ <repositories>
+    	<repository>
+			<id>arquillian all maven repo</id>
+			<url>http://arquillian-all-repo.googlecode.com/git/</url>
+			<layout>default</layout>
+		</repository>
+    </repositories>
 ----
 <1> We may get ride of these dependencies in future and stay only with arquillian-all, see issue #.
+
+ 
+
+
 
 == What is being bundled within arquillian-all.jar?
 
