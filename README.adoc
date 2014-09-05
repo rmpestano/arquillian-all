@@ -7,7 +7,7 @@
 :language: {source-language}
  
 
-This project gather 'all' arquillian *maven* dependencies in one jar. In fact its not ALL dependencies cause arquillian space is too big but i've bundled the ones i think are most used in arquillian projects, 
+This project gather 'all' arquillian *maven* dependencies in one jar. In fact its not ALL dependencies cause arquillian space is too big but i've bundled the ones i think are most used by arquillian projects, 
 If you think something important is missing you may clone and send a pull request.  
 
 The main motivation of this approach is to help beginners to start with arquillian but keep in mind that will you lose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
@@ -19,23 +19,23 @@ Declare the following dependencies and repository in your pom.xml:
 ----
 <dependencies>
   <dependency>
-        <groupId>com.procergs.acr</groupId>
-           <artifactId>arquillian-all</artifactId>
-           <version>1.0.0</version>
-           <scope>test</scope>
-        </dependency>
-        <dependency> <!--1-->
-           <groupId>xml-apis</groupId>
-           <artifactId>xml-apis</artifactId>
-           <version>1.4.01</version>
-           <scope>test</scope>
-        </dependency>
-        <dependency> <!--1-->
-          <groupId>org.jboss.shrinkwrap</groupId>
-          <artifactId>shrinkwrap-api</artifactId>
-          <version>1.2.2</version>
-          <scope>test</scope>
-        </dependency>
+      <groupId>com.procergs.acr</groupId>
+      <artifactId>arquillian-all</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+   </dependency>
+   <dependency> <!--1-->
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>1.4.01</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency> <!--1-->
+      <groupId>org.jboss.shrinkwrap</groupId>
+      <artifactId>shrinkwrap-api</artifactId>
+      <version>1.2.2</version>
+      <scope>test</scope>
+    </dependency>
 </dependencies>
  <repositories>
     <repository>
@@ -74,7 +74,7 @@ Index: pom.xml
  	   <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 				
