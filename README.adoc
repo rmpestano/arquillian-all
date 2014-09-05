@@ -10,7 +10,7 @@
 This project gather 'all' arquillian *maven* dependencies in one jar. In fact its not ALL dependencies cause arquillian space is too big but i've bundled the ones i think are most used in arquillian projects, 
 If you think something important is missing you may clone and send a pull request.  
 
-The main motivation of this approach is to help beginners to start with arquillian but keep in my that will you loose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
+The main motivation of this approach is to help beginners to start with arquillian but keep in my that will you lose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
 
 == How to use
 
@@ -42,7 +42,7 @@ Declare the following dependencies in you pom.xml:
 
 == What is being bundled within arquillian-all.jar?
 
-see arquillian-all {uri-repo}/pom.xml[pom.xml] and {uri-repo}/tree.txt[dependency tree]
+see arquillian-all {uri-repo}/blob/master/pom.xml[pom.xml] and {uri-repo}/blob/master/tree.txt[dependency tree]
 
 refer to release notes to see what's bundled on each version.
  
