@@ -10,7 +10,7 @@
 This project gather 'all' arquillian *maven* dependencies in one jar. In fact its not ALL dependencies cause arquillian space is too big but i've bundled the ones i think are most used in arquillian projects, 
 If you think something important is missing you may clone and send a pull request.  
 
-The main motivation of this approach is to help beginners to start with arquillian but keep in my that will you lose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
+The main motivation of this approach is to help beginners to start with arquillian but keep in mind that will you lose arquillian *platform modularity* so for example if one arquillian extension releases a new version you *cannot* benefit from it and will have to wait until next release of this project.  
 
 == How to use
 
