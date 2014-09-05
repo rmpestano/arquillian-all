@@ -19,31 +19,31 @@ Declare the following dependencies and repository in your pom.xml:
 ----
 <dependencies>
   <dependency>
-            <groupId>com.procergs.acr</groupId>
-            <artifactId>arquillian-all</artifactId>
-            <version>1.0.0</version>
-            <scope>test</scope>
+        <groupId>com.procergs.acr</groupId>
+           <artifactId>arquillian-all</artifactId>
+           <version>1.0.0</version>
+           <scope>test</scope>
         </dependency>
         <dependency> <!--1-->
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <version>1.4.01</version>
-            <scope>test</scope>
+           <groupId>xml-apis</groupId>
+           <artifactId>xml-apis</artifactId>
+           <version>1.4.01</version>
+           <scope>test</scope>
         </dependency>
         <dependency> <!--1-->
-            <groupId>org.jboss.shrinkwrap</groupId>
-            <artifactId>shrinkwrap-api</artifactId>
-            <version>1.2.2</version>
-            <scope>test</scope>
+          <groupId>org.jboss.shrinkwrap</groupId>
+          <artifactId>shrinkwrap-api</artifactId>
+          <version>1.2.2</version>
+          <scope>test</scope>
         </dependency>
 </dependencies>
  <repositories>
-    	<repository>
-			<id>arquillian all maven repo</id>
-			<url>http://arquillian-all-repo.googlecode.com/git/</url>
-			<layout>default</layout>
-		</repository>
-    </repositories>
+    <repository>
+		<id>arquillian all maven repo</id>
+		<url>http://arquillian-all-repo.googlecode.com/git/</url>
+		<layout>default</layout>
+	</repository>
+  </repositories>
 ----
 <1> We may get ride of these dependencies in future and stay only with arquillian-all, see issue #.
 
@@ -155,6 +155,25 @@ Index: pom.xml
 -            <version>2.1.0.Alpha1</version>
 -            <scope>test</scope>
 -         </dependency>
+
+-        <!-- REST -->
+-
+-        <dependency>
+-            <groupId>org.jboss.arquillian.extension</groupId>
+-            <artifactId>arquillian-rest-client-api</artifactId>
+-            <version>1.0.0.Alpha3</version>
+-        </dependency>
+-        <dependency>
+-            <groupId>org.jboss.arquillian.extension</groupId>
+-            <artifactId>arquillian-rest-client-impl-2x</artifactId>
+-            <version>1.0.0.Alpha3</version>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.jboss.arquillian.extension</groupId>
+-            <artifactId>arquillian-rest-warp-impl-resteasy</artifactId>
+-            <version>1.0.0.Alpha3</version>
+-        </dependency>
  
 -		<!-- arquillian bdd -->
 -
