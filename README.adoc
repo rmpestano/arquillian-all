@@ -39,9 +39,9 @@ Declare the following dependencies and repository in your pom.xml:
 </dependencies>
  <repositories>
     <repository>
-		<id>arquillian all maven repo</id>
-		<url>http://arquillian-all-repo.googlecode.com/git/</url>
-		<layout>default</layout>
+	  <id>arquillian all maven repo</id>
+	  <url>http://arquillian-all-repo.googlecode.com/git/</url>
+	  <layout>default</layout>
 	</repository>
   </repositories>
 ----
