@@ -1,7 +1,7 @@
 [INFO] Scanning for projects...
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.procergs.acr:arquillian-all:pom:1.0.0
-[WARNING] 'build.plugins.plugin.version' for com.ning.maven.plugins:maven-duplicate-finder-plugin is missing. @ line 199, column 21
+[WARNING] Some problems were encountered while building the effective model for org.jboss.arquillian:arquillian-all:pom:1.0.0
+[WARNING] 'build.plugins.plugin.version' for com.ning.maven.plugins:maven-duplicate-finder-plugin is missing. @ line 237, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -13,12 +13,11 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] 
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arquillian-all ---
-[INFO] com.procergs.acr:arquillian-all:pom:1.0.0
+[INFO] org.jboss.arquillian:arquillian-all:pom:1.0.0
 [INFO] +- org.jboss.arquillian.core:arquillian-core-api:jar:1.1.5.Final:compile
 [INFO] +- org.jboss.arquillian.junit:arquillian-junit-container:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.junit:arquillian-junit-core:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.test:arquillian-test-api:jar:1.1.5.Final:compile
-[INFO] |  +- org.jboss.arquillian.test:arquillian-test-spi:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.container:arquillian-container-test-api:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.container:arquillian-container-test-spi:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.core:arquillian-core-impl-base:jar:1.1.5.Final:compile
@@ -28,6 +27,8 @@
 [INFO] |  \- org.jboss.arquillian.container:arquillian-container-test-impl-base:jar:1.1.5.Final:compile
 [INFO] +- org.jboss.arquillian.config:arquillian-config-api:jar:1.1.5.Final:compile
 [INFO] |  \- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-api-base:jar:2.0.0-alpha-5:compile
+[INFO] +- org.jboss.arquillian.test:arquillian-test-spi:jar:1.1.5.Final:compile
+[INFO] |  \- org.jboss.arquillian.core:arquillian-core-spi:jar:1.1.5.Final:compile
 [INFO] +- org.jboss.arquillian.extension:arquillian-persistence-api:jar:1.0.0.Alpha7:compile
 [INFO] +- org.jboss.arquillian.extension:arquillian-persistence-dbunit:jar:1.0.0.Alpha7:compile
 [INFO] |  +- org.jboss.arquillian.extension:arquillian-persistence-spi:jar:1.0.0.Alpha7:compile
@@ -44,7 +45,6 @@
 [INFO] |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
 [INFO] |  +- org.apache.poi:poi:jar:3.2-FINAL:compile
 [INFO] |  |  \- commons-logging:commons-logging:jar:1.1:compile
-[INFO] |  +- org.jboss.arquillian.core:arquillian-core-spi:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.container:arquillian-container-spi:jar:1.1.5.Final:compile
 [INFO] |  |  \- org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.2:compile
 [INFO] |  \- org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.2:compile
@@ -65,45 +65,6 @@
 [INFO] |     +- javassist:javassist:jar:3.12.1.GA:compile
 [INFO] |     \- org.apache.httpcomponents:httpcore:jar:4.3:compile
 [INFO] +- org.jboss.arquillian.extension:arquillian-warp-jsf:jar:1.0.0.Alpha7:compile
-[INFO] +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-depchain:pom:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api:jar:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi:jar:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven:jar:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi-maven:jar:2.1.0:runtime
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven-archive:jar:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven:jar:2.1.0:runtime
-[INFO] |  |  +- org.eclipse.aether:aether-api:jar:0.9.0.M2:runtime
-[INFO] |  |  +- org.eclipse.aether:aether-impl:jar:0.9.0.M2:runtime
-[INFO] |  |  +- org.eclipse.aether:aether-spi:jar:0.9.0.M2:runtime
-[INFO] |  |  +- org.eclipse.aether:aether-util:jar:0.9.0.M2:runtime
-[INFO] |  |  +- org.eclipse.aether:aether-connector-wagon:jar:0.9.0.M2:runtime
-[INFO] |  |  +- org.apache.maven:maven-aether-provider:jar:3.1.1:runtime
-[INFO] |  |  +- org.apache.maven:maven-model:jar:3.1.1:runtime
-[INFO] |  |  +- org.apache.maven:maven-model-builder:jar:3.1.1:runtime
-[INFO] |  |  |  \- org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:runtime
-[INFO] |  |  +- org.apache.maven:maven-repository-metadata:jar:3.1.1:runtime
-[INFO] |  |  +- org.apache.maven:maven-settings:jar:3.1.1:runtime
-[INFO] |  |  +- org.apache.maven:maven-settings-builder:jar:3.1.1:runtime
-[INFO] |  |  +- org.codehaus.plexus:plexus-interpolation:jar:1.19:runtime
-[INFO] |  |  +- org.codehaus.plexus:plexus-utils:jar:3.0.15:compile
-[INFO] |  |  +- org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:runtime
-[INFO] |  |  |  \- org.sonatype.plexus:plexus-cipher:jar:1.4:runtime
-[INFO] |  |  +- org.apache.maven.wagon:wagon-provider-api:jar:2.6:runtime
-[INFO] |  |  +- org.apache.maven.wagon:wagon-file:jar:2.6:runtime
-[INFO] |  |  \- org.apache.maven.wagon:wagon-http-lightweight:jar:2.6:runtime
-[INFO] |  |     \- org.apache.maven.wagon:wagon-http-shared:jar:2.6:runtime
-[INFO] |  |        \- org.jsoup:jsoup:jar:1.7.2:runtime
-[INFO] |  \- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven-archive:jar:2.1.0:runtime
-[INFO] |     +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi-maven-archive:jar:2.1.0:runtime
-[INFO] |     +- org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M5:runtime
-[INFO] |     |  +- javax.enterprise:cdi-api:jar:1.0:runtime
-[INFO] |     |  |  +- javax.annotation:jsr250-api:jar:1.0:runtime
-[INFO] |     |  |  \- javax.inject:javax.inject:jar:1:runtime
-[INFO] |     |  +- org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:runtime
-[INFO] |     |  |  \- aopalliance:aopalliance:jar:1.0:runtime
-[INFO] |     |  \- org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5:runtime
-[INFO] |     \- org.codehaus.plexus:plexus-compiler-javac:jar:2.3:runtime
-[INFO] |        \- org.codehaus.plexus:plexus-compiler-api:jar:2.3:runtime
 [INFO] +- org.jboss.arquillian.graphene:graphene-webdriver:pom:2.1.0.Alpha1:compile
 [INFO] |  +- org.jboss.arquillian.graphene:graphene-webdriver-api:jar:2.1.0.Alpha1:compile
 [INFO] |  +- org.jboss.arquillian.graphene:graphene-webdriver-spi:jar:2.1.0.Alpha1:compile
@@ -188,19 +149,66 @@
 [INFO] |  |     \- xpp3:xpp3_min:jar:1.1.4c:compile
 [INFO] |  +- org.jbehave:jbehave-core:jar:3.7:compile
 [INFO] |  \- org.jbehave.site:jbehave-site-resources:zip:3.1.1:compile
-[INFO] +- org.jboss.spec.javax.annotation:jboss-annotations-api_1.1_spec:jar:1.0.1.Final:compile
-[INFO] +- org.jboss.spec.javax.ejb:jboss-ejb-api_3.1_spec:jar:1.0.2.Final:compile
+[INFO] +- org.jboss.arquillian.extension:arquillian-rest-client-api:jar:1.0.0.Alpha3:compile
+[INFO] +- org.jboss.arquillian.extension:arquillian-rest-client-impl-2x:jar:1.0.0.Alpha3:compile
+[INFO] |  \- org.jboss.arquillian.extension:arquillian-rest-client-impl-base:jar:1.0.0.Alpha3:compile
+[INFO] +- org.jboss.arquillian.extension:arquillian-rest-warp-impl-resteasy:jar:1.0.0.Alpha3:compile
+[INFO] |  +- org.jboss.arquillian.extension:arquillian-rest-warp-api:jar:1.0.0.Alpha3:compile
+[INFO] |  +- org.jboss.arquillian.extension:arquillian-rest-warp-spi:jar:1.0.0.Alpha3:compile
+[INFO] |  \- org.jboss.arquillian.extension:arquillian-rest-warp-impl-base:jar:1.0.0.Alpha3:compile
+[INFO] +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-depchain:pom:2.1.0:compile
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api:jar:2.1.0:compile
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi:jar:2.1.0:compile
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven:jar:2.1.0:compile
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi-maven:jar:2.1.0:runtime
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven-archive:jar:2.1.0:compile
+[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven:jar:2.1.0:runtime
+[INFO] |  |  +- org.eclipse.aether:aether-api:jar:0.9.0.M2:runtime
+[INFO] |  |  +- org.eclipse.aether:aether-impl:jar:0.9.0.M2:runtime
+[INFO] |  |  +- org.eclipse.aether:aether-spi:jar:0.9.0.M2:runtime
+[INFO] |  |  +- org.eclipse.aether:aether-util:jar:0.9.0.M2:runtime
+[INFO] |  |  +- org.eclipse.aether:aether-connector-wagon:jar:0.9.0.M2:runtime
+[INFO] |  |  +- org.apache.maven:maven-aether-provider:jar:3.1.1:runtime
+[INFO] |  |  +- org.apache.maven:maven-model:jar:3.1.1:runtime
+[INFO] |  |  +- org.apache.maven:maven-model-builder:jar:3.1.1:runtime
+[INFO] |  |  |  \- org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:runtime
+[INFO] |  |  +- org.apache.maven:maven-repository-metadata:jar:3.1.1:runtime
+[INFO] |  |  +- org.apache.maven:maven-settings:jar:3.1.1:runtime
+[INFO] |  |  +- org.apache.maven:maven-settings-builder:jar:3.1.1:runtime
+[INFO] |  |  +- org.codehaus.plexus:plexus-interpolation:jar:1.19:runtime
+[INFO] |  |  +- org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:runtime
+[INFO] |  |  |  \- org.sonatype.plexus:plexus-cipher:jar:1.4:runtime
+[INFO] |  |  +- org.apache.maven.wagon:wagon-provider-api:jar:2.6:runtime
+[INFO] |  |  +- org.apache.maven.wagon:wagon-file:jar:2.6:runtime
+[INFO] |  |  \- org.apache.maven.wagon:wagon-http-lightweight:jar:2.6:runtime
+[INFO] |  |     \- org.apache.maven.wagon:wagon-http-shared:jar:2.6:runtime
+[INFO] |  |        \- org.jsoup:jsoup:jar:1.7.2:runtime
+[INFO] |  \- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven-archive:jar:2.1.0:runtime
+[INFO] |     +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi-maven-archive:jar:2.1.0:runtime
+[INFO] |     +- org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M5:runtime
+[INFO] |     |  +- javax.enterprise:cdi-api:jar:1.0:runtime
+[INFO] |     |  |  +- javax.annotation:jsr250-api:jar:1.0:runtime
+[INFO] |     |  |  \- javax.inject:javax.inject:jar:1:runtime
+[INFO] |     |  +- org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:runtime
+[INFO] |     |  |  \- aopalliance:aopalliance:jar:1.0:runtime
+[INFO] |     |  \- org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5:runtime
+[INFO] |     \- org.codehaus.plexus:plexus-compiler-javac:jar:2.3:runtime
+[INFO] |        \- org.codehaus.plexus:plexus-compiler-api:jar:2.3:runtime
 [INFO] +- org.jboss.arquillian.protocol:arquillian-protocol-servlet:jar:1.1.5.Final:compile
 [INFO] |  \- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-spi:jar:2.0.0-alpha-5:compile
 [INFO] |     \- org.easytesting:fest-assert:jar:1.4:compile
 [INFO] |        \- org.easytesting:fest-util:jar:1.1.6:compile
+[INFO] +- org.jboss.spec.javax.annotation:jboss-annotations-api_1.1_spec:jar:1.0.1.Final:compile
+[INFO] +- org.jboss.spec.javax.ejb:jboss-ejb-api_3.1_spec:jar:1.0.2.Final:compile
+[INFO] +- org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec:jar:1.0.1.Final:compile
 [INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
 [INFO] |  \- log4j:log4j:jar:1.2.17:compile
-[INFO] \- org.codehaus.jackson:jackson-core-lgpl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-core-lgpl:jar:1.9.13:compile
+[INFO] \- org.codehaus.plexus:plexus-utils:jar:3.0.17:compile
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 3.082s
-[INFO] Finished at: Fri Sep 05 11:27:07 BRT 2014
+[INFO] Total time: 3.847s
+[INFO] Finished at: Fri Sep 05 16:37:54 BRT 2014
 [INFO] Final Memory: 18M/222M
 [INFO] ------------------------------------------------------------------------
