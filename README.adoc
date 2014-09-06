@@ -21,7 +21,7 @@ Declare the following dependencies and repository in your pom.xml:
   <dependency>
       <groupId>org.jboss.arquillian</groupId>
       <artifactId>arquillian-all</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
       <scope>test</scope>
    </dependency>
    <dependency> <!--1-->
