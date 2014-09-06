@@ -265,4 +265,22 @@ Index: pom.xml
 -	</dependencyManagement>
 ----
 
- 
+Excluding depndencies
+==
+you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclude it:
+
+[source,xml]
+----
+ <dependency>
+        <groupId>org.jboss.arquillian</groupId>
+        <artifactId>arquillian-all</artifactId>
+        <version>1.0.0</version>
+        <scope>test</scope>
+           <exclusions>
+              <exclusion>
+                  <groupId>org.jboss.arquillian.jbehave</groupId>
+                  <artifactId>arquillian-jbehave-core</artifactId>
+              </exclusion>
+           </exclusions>
+ </dependency>
+ ----
