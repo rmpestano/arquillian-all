@@ -228,12 +228,6 @@ Index: pom.xml
 -			<scope>test</scope>
 -		</dependency>
 -
--		<dependency>
--			<groupId>org.codehaus.jackson</groupId>
--			<artifactId>jackson-core-lgpl</artifactId>
--			<version>1.9.13</version>
--			<scope>test</scope>
--		</dependency>
  
  	</dependencies>
  
@@ -283,3 +277,8 @@ you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclu
            </exclusions>
  </dependency>
 ----
+
+== Containers
+
+No container specific dependencies are added cause they usualy dependend on specific sepup(eg: location or address).
+Also it would require one arquillian-all dependency for each container cause we can't have two container at the same time in classpath
