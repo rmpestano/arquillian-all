@@ -265,7 +265,7 @@ Index: pom.xml
 -	</dependencyManagement>
 ----
 
-==Excluding dependencies
+== Excluding dependencies
 
 you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclude it:
 
