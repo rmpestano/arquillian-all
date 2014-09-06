@@ -24,13 +24,13 @@ Declare the following dependencies and repository in your pom.xml:
       <version>1.0.1</version>
       <scope>test</scope>
    </dependency>
-   <dependency> <!--1-->
+   <dependency>
       <groupId>xml-apis</groupId>
       <artifactId>xml-apis</artifactId>
       <version>1.4.01</version>
       <scope>test</scope>
     </dependency>
-    <dependency> <!--1-->
+    <dependency> 
       <groupId>org.jboss.shrinkwrap</groupId>
       <artifactId>shrinkwrap-api</artifactId>
       <version>1.2.2</version>
@@ -45,7 +45,6 @@ Declare the following dependencies and repository in your pom.xml:
    </repository>
 </repositories>
 ----
-<1> We may get ride of these dependencies in future and stay only with arquillian-all, see issue #.
 
  
 
