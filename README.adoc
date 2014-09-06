@@ -81,8 +81,8 @@ Index: pom.xml
  		<!-- arquillian -->
 +		  <dependency>
 +            <groupId>org.jboss.arquillian</groupId>
-+            <artifactId>org.jboss.arquillian</artifactId>
-+            <version>1.0.0</version>
++            <artifactId>arquillian-all</artifactId>
++            <version>1.0.1</version>
 +            <scope>test</scope>
 +        </dependency>
 +        <dependency>
