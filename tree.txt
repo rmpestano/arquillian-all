@@ -1,7 +1,7 @@
 [INFO] Scanning for projects...
 [WARNING] 
-[WARNING] Some problems were encountered while building the effective model for org.jboss.arquillian:arquillian-all:pom:1.0.0
-[WARNING] 'build.plugins.plugin.version' for com.ning.maven.plugins:maven-duplicate-finder-plugin is missing. @ line 237, column 21
+[WARNING] Some problems were encountered while building the effective model for org.jboss.arquillian:arquillian-all:pom:1.0.1
+[WARNING] 'build.plugins.plugin.version' for com.ning.maven.plugins:maven-duplicate-finder-plugin is missing. @ line 271, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
@@ -9,11 +9,11 @@
 [WARNING] 
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
-[INFO] Building arquillian-all 1.0.0
+[INFO] Building arquillian-all 1.0.1
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ arquillian-all ---
-[INFO] org.jboss.arquillian:arquillian-all:pom:1.0.0
+[INFO] --- maven-dependency-plugin:2.1:tree (default-cli) @ arquillian-all ---
+[INFO] org.jboss.arquillian:arquillian-all:pom:1.0.1
 [INFO] +- org.jboss.arquillian.core:arquillian-core-api:jar:1.1.5.Final:compile
 [INFO] +- org.jboss.arquillian.junit:arquillian-junit-container:jar:1.1.5.Final:compile
 [INFO] |  +- org.jboss.arquillian.junit:arquillian-junit-core:jar:1.1.5.Final:compile
@@ -54,9 +54,7 @@
 [INFO] |  +- org.jboss.arquillian.extension:arquillian-warp-spi:jar:1.0.0.Alpha7:compile
 [INFO] |  \- org.jboss.arquillian.extension:arquillian-warp-impl:jar:1.0.0.Alpha7:compile
 [INFO] |     +- org.littleshoot:littleproxy:jar:1.0.0-beta5:compile
-[INFO] |     |  +- com.google.guava:guava:jar:14.0.1:compile
 [INFO] |     |  +- commons-cli:commons-cli:jar:1.2:compile
-[INFO] |     |  +- commons-codec:commons-codec:jar:1.7:compile
 [INFO] |     |  +- org.apache.commons:commons-lang3:jar:3.1:compile
 [INFO] |     |  +- io.netty:netty-all:jar:4.0.14.Final:compile
 [INFO] |     |  +- com.barchart.udt:barchart-udt-bundle:jar:2.3.0:compile
@@ -65,59 +63,63 @@
 [INFO] |     +- javassist:javassist:jar:3.12.1.GA:compile
 [INFO] |     \- org.apache.httpcomponents:httpcore:jar:4.3:compile
 [INFO] +- org.jboss.arquillian.extension:arquillian-warp-jsf:jar:1.0.0.Alpha7:compile
+[INFO] +- org.seleniumhq.selenium:selenium-api:jar:2.42.2:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  \- org.json:json:jar:20080701:compile
+[INFO] +- org.seleniumhq.selenium:selenium-java:jar:2.42.2:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:2.42.2:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-htmlunit-driver:jar:2.42.2:compile
+[INFO] |  |  +- net.sourceforge.htmlunit:htmlunit:jar:2.14:compile
+[INFO] |  |  |  +- xalan:xalan:jar:2.7.1:compile
+[INFO] |  |  |  |  \- xalan:serializer:jar:2.7.1:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpmime:jar:4.3.2:compile
+[INFO] |  |  |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.14:compile
+[INFO] |  |  |  +- xerces:xercesImpl:jar:2.11.0:compile
+[INFO] |  |  |  |  \- xml-apis:xml-apis:jar:1.4.01:compile
+[INFO] |  |  |  +- net.sourceforge.nekohtml:nekohtml:jar:1.9.20:compile
+[INFO] |  |  |  +- net.sourceforge.cssparser:cssparser:jar:0.9.13:compile
+[INFO] |  |  |  |  \- org.w3c.css:sac:jar:1.3:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-websocket:jar:8.1.14.v20131031:compile
+[INFO] |  |  |     +- org.eclipse.jetty:jetty-util:jar:8.1.14.v20131031:compile
+[INFO] |  |  |     +- org.eclipse.jetty:jetty-io:jar:8.1.14.v20131031:compile
+[INFO] |  |  |     \- org.eclipse.jetty:jetty-http:jar:8.1.14.v20131031:compile
+[INFO] |  |  \- org.apache.httpcomponents:httpclient:jar:4.3.2:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:2.42.2:compile
+[INFO] |  |  +- commons-io:commons-io:jar:2.4:compile
+[INFO] |  |  \- org.apache.commons:commons-exec:jar:1.1:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:2.42.2:compile
+[INFO] |  |  +- net.java.dev.jna:jna:jar:3.4.0:compile
+[INFO] |  |  \- net.java.dev.jna:platform:jar:3.4.0:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-safari-driver:jar:2.42.2:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-support:jar:2.42.2:compile
+[INFO] |  \- org.webbitserver:webbit:jar:0.4.14:compile
+[INFO] |     \- io.netty:netty:jar:3.5.2.Final:compile
+[INFO] +- org.seleniumhq.selenium:selenium-server:jar:2.42.2:compile
+[INFO] |  +- org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
+[INFO] |  +- org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
+[INFO] |  +- mx4j:mx4j-tools:jar:3.0.1:compile
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.9:compile
+[INFO] |  +- org.seleniumhq.selenium:jetty-repacked:jar:7.6.1:compile
+[INFO] |  +- net.jcip:jcip-annotations:jar:1.0:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- org.jboss.arquillian.extension:arquillian-drone-impl:jar:2.0.0.Alpha2:compile
+[INFO] |  +- org.jboss.arquillian.extension:arquillian-drone-api:jar:2.0.0.Alpha2:compile
+[INFO] |  +- org.jboss.arquillian.extension:arquillian-drone-spi:jar:2.0.0.Alpha2:compile
+[INFO] |  \- org.jboss.arquillian.extension:arquillian-drone-configuration:jar:2.0.0.Alpha2:compile
+[INFO] +- org.jboss.arquillian.extension:arquillian-drone-webdriver-depchain:pom:2.0.0.Alpha2:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:2.42.2:compile
+[INFO] |  |  \- cglib:cglib-nodep:jar:2.1_3:compile
+[INFO] |  +- com.opera:operadriver:jar:1.5:compile
+[INFO] |  |  +- com.opera:operalaunchers:jar:1.1:compile
+[INFO] |  |  +- com.google.protobuf:protobuf-java:jar:2.4.1:compile
+[INFO] |  |  +- commons-jxpath:commons-jxpath:jar:1.3:compile
+[INFO] |  |  \- org.ini4j:ini4j:jar:0.5.2:compile
+[INFO] |  \- org.jboss.arquillian.extension:arquillian-phantom-driver:jar:1.1.2.Final:compile
+[INFO] |     \- com.github.detro.ghostdriver:phantomjsdriver:jar:1.1.0:compile
 [INFO] +- org.jboss.arquillian.graphene:graphene-webdriver:pom:2.1.0.Alpha1:compile
 [INFO] |  +- org.jboss.arquillian.graphene:graphene-webdriver-api:jar:2.1.0.Alpha1:compile
 [INFO] |  +- org.jboss.arquillian.graphene:graphene-webdriver-spi:jar:2.1.0.Alpha1:compile
-[INFO] |  +- org.jboss.arquillian.graphene:graphene-webdriver-impl:jar:2.1.0.Alpha1:compile
-[INFO] |  |  +- org.jboss.arquillian.extension:arquillian-drone-impl:jar:2.0.0.Alpha2:compile
-[INFO] |  |  \- org.jboss.arquillian.extension:arquillian-drone-configuration:jar:2.0.0.Alpha2:compile
-[INFO] |  +- org.jboss.arquillian.extension:arquillian-drone-webdriver-depchain:pom:2.0.0.Alpha2:compile
-[INFO] |  |  +- org.jboss.arquillian.extension:arquillian-drone-api:jar:2.0.0.Alpha2:compile
-[INFO] |  |  +- org.jboss.arquillian.extension:arquillian-drone-spi:jar:2.0.0.Alpha2:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-api:jar:2.42.2:compile
-[INFO] |  |  |  \- org.json:json:jar:20080701:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-support:jar:2.42.2:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-chrome-driver:jar:2.42.2:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-firefox-driver:jar:2.42.2:compile
-[INFO] |  |  |  \- org.apache.commons:commons-exec:jar:1.1:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-htmlunit-driver:jar:2.42.2:compile
-[INFO] |  |  |  +- net.sourceforge.htmlunit:htmlunit:jar:2.14:compile
-[INFO] |  |  |  |  +- xalan:xalan:jar:2.7.1:compile
-[INFO] |  |  |  |  |  \- xalan:serializer:jar:2.7.1:compile
-[INFO] |  |  |  |  +- org.apache.httpcomponents:httpmime:jar:4.3.2:compile
-[INFO] |  |  |  |  +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.14:compile
-[INFO] |  |  |  |  +- xerces:xercesImpl:jar:2.11.0:compile
-[INFO] |  |  |  |  +- net.sourceforge.nekohtml:nekohtml:jar:1.9.20:compile
-[INFO] |  |  |  |  +- net.sourceforge.cssparser:cssparser:jar:0.9.13:compile
-[INFO] |  |  |  |  |  \- org.w3c.css:sac:jar:1.3:compile
-[INFO] |  |  |  |  \- org.eclipse.jetty:jetty-websocket:jar:8.1.14.v20131031:compile
-[INFO] |  |  |  |     +- org.eclipse.jetty:jetty-util:jar:8.1.14.v20131031:compile
-[INFO] |  |  |  |     +- org.eclipse.jetty:jetty-io:jar:8.1.14.v20131031:compile
-[INFO] |  |  |  |     \- org.eclipse.jetty:jetty-http:jar:8.1.14.v20131031:compile
-[INFO] |  |  |  \- org.apache.httpcomponents:httpclient:jar:4.3.2:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-ie-driver:jar:2.42.2:compile
-[INFO] |  |  |  +- net.java.dev.jna:jna:jar:3.4.0:compile
-[INFO] |  |  |  \- net.java.dev.jna:platform:jar:3.4.0:compile
-[INFO] |  |  +- org.seleniumhq.selenium:selenium-remote-driver:jar:2.42.2:compile
-[INFO] |  |  |  \- cglib:cglib-nodep:jar:2.1_3:compile
-[INFO] |  |  +- com.opera:operadriver:jar:1.5:compile
-[INFO] |  |  |  +- com.opera:operalaunchers:jar:1.1:compile
-[INFO] |  |  |  +- com.google.protobuf:protobuf-java:jar:2.4.1:compile
-[INFO] |  |  |  +- commons-jxpath:commons-jxpath:jar:1.3:compile
-[INFO] |  |  |  \- org.ini4j:ini4j:jar:0.5.2:compile
-[INFO] |  |  \- org.jboss.arquillian.extension:arquillian-phantom-driver:jar:1.1.2.Final:compile
-[INFO] |  |     \- com.github.detro.ghostdriver:phantomjsdriver:jar:1.1.0:compile
-[INFO] |  |        \- org.seleniumhq.selenium:selenium-server:jar:2.42.2:compile
-[INFO] |  |           +- org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
-[INFO] |  |           +- org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
-[INFO] |  |           +- mx4j:mx4j-tools:jar:3.0.1:compile
-[INFO] |  |           +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.9:compile
-[INFO] |  |           +- org.seleniumhq.selenium:jetty-repacked:jar:7.6.1:compile
-[INFO] |  |           \- net.jcip:jcip-annotations:jar:1.0:compile
-[INFO] |  \- org.seleniumhq.selenium:selenium-java:jar:2.42.2:compile
-[INFO] |     +- org.seleniumhq.selenium:selenium-safari-driver:jar:2.42.2:compile
-[INFO] |     \- org.webbitserver:webbit:jar:0.4.14:compile
-[INFO] |        \- io.netty:netty:jar:3.5.2.Final:compile
+[INFO] |  \- org.jboss.arquillian.graphene:graphene-webdriver-impl:jar:2.1.0.Alpha1:compile
 [INFO] +- org.jboss.arquillian.graphene:arquillian-browser-screenshooter:jar:2.1.0.Alpha1:compile
 [INFO] |  +- org.arquillian.extension:arquillian-recorder-screenshooter-impl-base:jar:1.0.0.Alpha4:compile
 [INFO] |  |  +- org.arquillian.extension:arquillian-recorder-screenshooter-api:jar:1.0.0.Alpha4:compile
@@ -131,8 +133,7 @@
 [INFO] |  |  |  +- org.arquillian.extension:arquillian-recorder-reporter-spi:jar:1.0.0.Alpha4:compile
 [INFO] |  |  |  \- org.arquillian.extension:arquillian-recorder-video-api:jar:1.0.0.Alpha4:compile
 [INFO] |  |  +- org.jboss.arquillian.core:arquillian-core-impl-base:jar:tests:1.1.5.Final:compile
-[INFO] |  |  +- org.jboss.arquillian.test:arquillian-test-impl-base:jar:tests:1.1.5.Final:compile
-[INFO] |  |  \- commons-io:commons-io:jar:1.3.2:compile
+[INFO] |  |  \- org.jboss.arquillian.test:arquillian-test-impl-base:jar:tests:1.1.5.Final:compile
 [INFO] |  +- org.arquillian.extension:arquillian-recorder-screenshooter-spi:jar:1.0.0.Alpha4:compile
 [INFO] |  |  \- org.arquillian.extension:arquillian-recorder-spi:jar:1.0.0.Alpha4:compile
 [INFO] |  \- org.jboss.arquillian.extension:arquillian-drone-webdriver:jar:2.0.0.Alpha2:compile
@@ -158,10 +159,10 @@
 [INFO] |  \- org.jboss.arquillian.extension:arquillian-rest-warp-impl-base:jar:1.0.0.Alpha3:compile
 [INFO] +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-depchain:pom:2.1.0:compile
 [INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api:jar:2.1.0:compile
-[INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi:jar:2.1.0:compile
 [INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven:jar:2.1.0:compile
 [INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi-maven:jar:2.1.0:runtime
 [INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven-archive:jar:2.1.0:compile
+[INFO] |  |  \- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-spi:jar:2.1.0:compile
 [INFO] |  +- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven:jar:2.1.0:runtime
 [INFO] |  |  +- org.eclipse.aether:aether-api:jar:0.9.0.M2:runtime
 [INFO] |  |  +- org.eclipse.aether:aether-impl:jar:0.9.0.M2:runtime
@@ -208,7 +209,7 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 3.847s
-[INFO] Finished at: Fri Sep 05 16:37:54 BRT 2014
-[INFO] Final Memory: 18M/222M
+[INFO] Total time: 5.591s
+[INFO] Finished at: Sat Sep 06 09:26:05 BRT 2014
+[INFO] Final Memory: 13M/32M
 [INFO] ------------------------------------------------------------------------

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.arquillian</groupId>
     <artifactId>arquillian-all</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -70,6 +70,40 @@
             <groupId>org.jboss.arquillian.extension</groupId>
             <artifactId>arquillian-warp-jsf</artifactId>
             <version>${version.warp}</version>
+        </dependency>
+
+        <!-- selenium -->
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${version.selenium}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${version.selenium}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.seleniumhq.selenium</groupId>-->
+            <!--<artifactId>selenium-server</artifactId>-->
+            <!--<version>${version.selenium}</version>-->
+        <!--</dependency>-->
+
+        <!--Drone -->
+
+        <dependency>
+            <groupId>org.jboss.arquillian.extension</groupId>
+            <artifactId>arquillian-drone-impl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.arquillian.extension</groupId>
+            <artifactId>arquillian-drone-webdriver-depchain</artifactId>
+            <type>pom</type>
+            <version>${version.drone}</version>
         </dependency>
 
         <!-- Graphene -->
@@ -161,23 +195,27 @@
 		</dependency>
 
 
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-lgpl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.jackson</groupId>-->
+            <!--<artifactId>jackson-core-lgpl</artifactId>-->
+            <!--<version>1.9.13</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-utils</artifactId>
             <version>3.0.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.2.5</version>
         </dependency>
 
 
@@ -203,7 +241,7 @@
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
                 <artifactId>arquillian-drone-bom</artifactId>
-                <version>${version.drone}</version>
+                    <version>${version.drone}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -227,6 +265,7 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
+
                             <descriptors>
                                 <descriptor>src/main/assembly/arquillian-all.xml</descriptor>
                             </descriptors>
