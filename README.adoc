@@ -283,4 +283,4 @@ you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclu
               </exclusion>
            </exclusions>
  </dependency>
- ----
+----
