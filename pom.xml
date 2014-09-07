@@ -297,14 +297,4 @@
 			<layout>default</layout>
 		</repository>
     </repositories>
-    <distributionManagement>
-        <repository>
-            <id>release-local</id>
-            <url>http://maven.procergs.reders/artifactory/libs-release-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots-local</id>
-            <url>http://maven.procergs.reders/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
