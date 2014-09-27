@@ -21,7 +21,7 @@ Declare the following dependencies and repository in your pom.xml:
   <dependency>
       <groupId>org.jboss.arquillian</groupId>
       <artifactId>arquillian-all</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
       <scope>test</scope>
    </dependency>
    <dependency>
@@ -81,7 +81,7 @@ Index: pom.xml
 +		  <dependency>
 +            <groupId>org.jboss.arquillian</groupId>
 +            <artifactId>arquillian-all</artifactId>
-+            <version>1.0.1</version>
++            <version>1.0.2</version>
 +            <scope>test</scope>
 +        </dependency>
 +        <dependency>
@@ -267,7 +267,7 @@ you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclu
  <dependency>
         <groupId>org.jboss.arquillian</groupId>
         <artifactId>arquillian-all</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <scope>test</scope>
            <exclusions>
               <exclusion>
@@ -277,6 +277,27 @@ you can exclude dependencies as usual, eg: if you dont use Jbehave you can exclu
            </exclusions>
  </dependency>
 ----
+
+or if you dont want screenshot reports:
+
+[source,xml]
+----
+ <dependency>
+        <groupId>org.jboss.arquillian</groupId>
+        <artifactId>arquillian-all</artifactId>
+        <version>1.0.0</version>
+        <scope>test</scope>
+           <exclusions>
+              <exclusion>
+                  <groupId>org.jboss.arquillian.graphene</groupId>
+                  <artifactId>arquillian-browser-screenshooter</artifactId>
+              </exclusion>
+           </exclusions>
+ </dependency>
+----
+
+
+
 
 == Containers
 
