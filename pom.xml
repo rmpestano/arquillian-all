@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.arquillian</groupId>
     <artifactId>arquillian-all</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-        <version.selenium>2.42.2</version.selenium>
+        <version.selenium>2.43.1</version.selenium>
         <version.drone>2.0.0.Alpha2</version.drone>
         <version.warp>1.0.0.Alpha7</version.warp>
         <version.arquillian>1.1.5.Final</version.arquillian>
@@ -136,6 +136,12 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+        	<groupId>org.seleniumhq.selenium</groupId>
+        	<artifactId>selenium-remote-driver</artifactId>
+        	<version>${version.selenium}</version>
+        </dependency>
+
         <!-- arquillian bdd -->
 
         <!-- jbehave -->
@@ -182,16 +188,19 @@
             <groupId>org.jboss.spec.javax.annotation</groupId>
             <artifactId>jboss-annotations-api_1.1_spec</artifactId>
             <version>1.0.1.Final</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
             <artifactId>jboss-ejb-api_3.1_spec</artifactId>
             <version>1.0.2.Final</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-			<groupId>org.jboss.spec.javax.interceptor</groupId>
-			<artifactId>jboss-interceptors-api_1.1_spec</artifactId>
-			<version>1.0.1.Final</version>
+            <groupId>org.jboss.spec.javax.interceptor</groupId>
+            <artifactId>jboss-interceptors-api_1.1_spec</artifactId>
+            <version>1.0.1.Final</version>
+            <scope>provided</scope>
 		</dependency>
 
 
